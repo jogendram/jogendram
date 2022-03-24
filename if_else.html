@@ -1,0 +1,29 @@
+<hmtl>
+  <head>
+    <title>Example call</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      function Emp(id, name) {
+        this.id = id;
+        this.name = name;
+      }
+      function PermanentEmp(id, name) {
+        Emp.call(this, id, name);
+      }
+      function TemporaryEmp(id, name) {
+        Emp.call(this, id, name);
+      }
+
+      var pEmp = new PermanentEmp(1, "rahul patel");
+      var tEmp = new TemporaryEmp(2, "jogendra panchal");
+
+      document.write(pEmp.id + "" + pEmp.name);
+      document.write("<br>");
+
+      document.write(tEmp.id + "" + tEmp.name);
+      // document.writeln(new PermanentEmp(1).id);
+    </script>
+  </body>
+</hmtl>
