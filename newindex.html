@@ -5,9 +5,10 @@
 
   <body>
     <script type="text/javascript">
-      function Emp(id, name) {
+      function Emp(id, name, add, mob) {
         this.id = id;
         this.name = name;
+        this.name = add;
       }
       function PermanentEmp(id, name) {
         Emp.call(this, id, name);
@@ -16,7 +17,7 @@
         Emp.call(this, id, name);
       }
 
-      var pEmp = new PermanentEmp(1, "rahul patel");
+      var pEmp = new PermanentEmp(1, "rahul patel", "Mehsana");
       var tEmp = new TemporaryEmp(2, "jogendra panchal");
 
       document.write(pEmp.id + "" + pEmp.name);
